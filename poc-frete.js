@@ -10,7 +10,7 @@ async function cotarFrete() {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${TOKEN}`,
-            'User-Agent': 'POC Bolsas (joaopedroababa132@gmail.com)'
+            'User-Agent': 'POC Bolsas (user@gmail.com)'
          },
          body: JSON.stringify({
             from: { postal_code: '60160230' },  // Fortaleza/CE
