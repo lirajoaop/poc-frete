@@ -43,6 +43,10 @@ export default function App() {
     setCart(curr => curr.filter(i => i.id !== id));
   }
 
+  function clearCart() {
+    setCart([]);
+  }
+
   const itemCount = cart.reduce((s, i) => s + i.quantity, 0);
 
   return (
@@ -72,7 +76,12 @@ export default function App() {
         </section>
 
         <aside className="lg:col-span-1">
-          <Cart items={cart} onUpdate={updateQuantity} onRemove={removeFromCart} />
+          <Cart
+            items={cart}
+            onUpdate={updateQuantity}
+            onRemove={removeFromCart}
+            onClearCart={clearCart}
+          />
         </aside>
       </main>
     </div>
